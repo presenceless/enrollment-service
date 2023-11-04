@@ -6,11 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/enrol")
+@RequestMapping("/api/v1/enroll")
 public class EnrollmentController {
 
     @PostMapping
-    public Object enrol(@RequestBody Object enrollmentData) {
+    public Object enroll(@RequestBody Object enrollmentData) {
         return enrollmentData;
+    }
+
+    @PostMapping("/biometrics")
+    public Object biometrics(@RequestBody Object biometricsData) {
+        return biometricsData;
     }
 }
